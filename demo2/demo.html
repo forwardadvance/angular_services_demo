@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title ng-controller='titleController'>{{items.length}} in cart</title>
+    <script src="lib/angular.js"></script>
+    <script src="js/demo.js"></script>
+  </head>
+
+  <body>
+    <div ng-controller="cartController">
+      <table>
+        <th>Item</th>
+        <th>Price</th>
+        <tr ng-repeat='item in items'>
+          <td>{{item.name}}</td>
+          <td>{{item.price}}</td>
+        </tr>
+      </table>
+      <button ng-click='addCat()'>Buy Cat</button>
+      <button ng-click='addSheep()'>Buy Sheep</button>
+    </div>
+  </body>
+</html>
